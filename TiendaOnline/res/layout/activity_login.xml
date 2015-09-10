@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="560dp"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="197dp" >
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/logoLogin"
+                android:scrollbars="vertical"
+                android:src="@drawable/ic_launcher" />
+
+            <EditText
+                android:id="@+id/editTextUsuarioLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageViewLogo"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="@string/usuarioLogin"
+                android:inputType="text"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/editTextContrasenaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/editTextUsuarioLogin"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="@string/contrasenaLogin"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/textViewCategoriaLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="italic" 
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true"
+                android:text="@string/categoriaLogin" />
+
+            <Button
+                android:id="@+id/buttonIniciarSesionLogin"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/editTextContrasenaLogin"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/holo_blue_light"
+                android:onClick="onIniciarSesion"
+                android:text="@string/inicio_sesionLogin" />
+
+            <Button
+                android:id="@+id/buttonRegistrarse"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/buttonIniciarSesionLogin"
+                android:background="@android:color/transparent"
+                android:onClick="onResgistrase"
+                android:text="@string/registrarsebtnLogin"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/buttonTodosLosProductos"
+                android:layout_width="fill_parent"
+                android:layout_height="62dp"
+                android:background="@android:color/white"
+                android:onClick="onProductos"
+                android:text="@string/todos_los_productosLogin" />
+
+            <ListView
+                android:id="@+id/listViewListaProductosLogin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" >
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

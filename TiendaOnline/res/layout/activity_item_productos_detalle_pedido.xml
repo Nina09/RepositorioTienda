@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ItemProductosDetallePedidoActivity" >
+
+    <TextView
+        android:id="@+id/textViewDescripcionItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/textviewDescripcionPItemDetallePedido" />
+
+    <TextView
+        android:id="@+id/textViewCantidadItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewDescripcionItem"
+        android:layout_alignBottom="@+id/textViewDescripcionItem"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/textViewDescripcionItem"
+        android:text="@string/textviewCantidadPItemDetallePedido" />
+
+    <TextView
+        android:id="@+id/textViewSubtotalPed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewPrecioItem"
+        android:layout_alignBottom="@+id/textViewPrecioItem"
+        android:layout_alignParentRight="true"
+        android:text="@string/textviewSubtotalDetallePedido" />
+
+    <TextView
+        android:id="@+id/textViewPrecioItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewCantidadItem"
+        android:layout_alignBottom="@+id/textViewCantidadItem"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/textViewSubtotalPed"
+        android:text="@string/textviewPrecioPItemDetallePedido" />
+
+</RelativeLayout>

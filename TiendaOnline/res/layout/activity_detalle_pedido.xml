@@ -1,0 +1,229 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DetallePedidoActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewTituloPedido"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="@string/p_didoDetallePedido" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/NombreDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_DetallePedido"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textViewNombreDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textviewNombreDetallePedido"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/CedulaDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cedula_DetallePedido"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/TextViewCedulaDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textviewCedulaDetallePedido"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_DetallePedido"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textViewFechaDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textviewFechaDetallePedido"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewNumDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/textviewNumDetallePedido"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/NumPedidoDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/textViewNumDetallePedido"
+                android:text="@string/pedido_n_DetallePedido"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@android:color/holo_blue_light" >
+
+            <TextView
+                android:id="@+id/textViewNombreProductoDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/descripcionDetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewCantidadProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewNombreProductoDetalle"
+                android:layout_alignBottom="@+id/textViewNombreProductoDetalle"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@+id/textViewNombreProductoDetalle"
+                android:text="@string/cantidadDetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewPrecioProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewCantidadProducto"
+                android:layout_alignBottom="@+id/textViewCantidadProducto"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/textViewCantidadProducto"
+                android:text="@string/precioDetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewSubtotalPedid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewPrecioProducto"
+                android:layout_alignBottom="@+id/textViewPrecioProducto"
+                android:layout_alignParentRight="true"
+                android:text="@string/subtotalDetallePedido" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="169dp"
+            android:baselineAligned="false" >
+
+            <ListView
+                android:id="@+id/listViewListasDetallePedido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white" >
+
+            </ListView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:background="@android:color/holo_blue_light" >
+
+            <TextView
+                android:id="@+id/textViewSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewTotalCarrito"
+                android:layout_alignParentTop="true"
+                android:text="@string/subtotalDetalle" />
+
+            <TextView
+                android:id="@+id/IVADetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textViewTotalDetalle"
+                android:layout_alignLeft="@+id/textViewSubtotal"
+                android:text="@string/iva_DetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewTotalDetalle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewIVADetallePedido"
+                android:layout_marginRight="20dp"
+                android:text="@string/textviewTotalDetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewIVADetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewTotalDetalle"
+                android:layout_below="@+id/textViewSubtotalDetallePedido"
+                android:text="@string/textviewIVADetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewSubtotalDetallePedido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textViewIVADetallePedido"
+                android:layout_alignParentTop="true"
+                android:text="@string/textviewDetallePedido" />
+
+            <TextView
+                android:id="@+id/textViewTotalCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewTotalDetalle"
+                android:layout_alignBottom="@+id/textViewTotalDetalle"
+                android:layout_marginRight="36dp"
+                android:layout_toLeftOf="@+id/textViewTotalDetalle"
+                android:text="@string/total_DetallePedido" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

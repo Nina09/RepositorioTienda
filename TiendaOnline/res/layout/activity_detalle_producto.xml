@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DetalleProductoActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="454dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageViewLogoDetalle"
+                android:layout_width="300dp"
+                android:layout_height="280dp"
+                android:contentDescription="@string/logoProducto"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/textViewNombreDetalleProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageViewLogoDetalle"
+                android:text="@string/nombre_productoDetalleProducto"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewNombreDetalleProducto"
+                android:text="@string/descripcion_productoDetalleProducto"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextCantidad"
+                android:layout_alignBottom="@+id/editTextCantidad"
+                android:layout_alignParentLeft="true"
+                android:text="@string/cantidad_Producto"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textViewSignoDolarDetalleProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewDescripcion"
+                android:text="@string/_signodolarDetalleproducto"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButtonCarrito"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/holo_blue_dark"
+                android:contentDescription="@string/btnAgregarCarritoDetalle"
+                android:onClick="onAgregar"
+                android:src="@drawable/ic_carrito" />
+
+            <EditText
+                android:id="@+id/editTextCantidad"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textViewPrecio"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:inputType="number"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textViewAgregarAlCarrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageButtonCarrito"
+                android:layout_centerHorizontal="true"
+                android:text="@string/agregar_al_carritoCarrito"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewSignoDolarDetalleProducto"
+                android:layout_alignBottom="@+id/textViewSignoDolarDetalleProducto"
+                android:layout_alignRight="@+id/textViewNombreDetalleProducto"
+                android:text="@string/precio_productoDetalleProducto"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

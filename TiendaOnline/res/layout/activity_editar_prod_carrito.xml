@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditarProdCarritoActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/TextViewEditarNombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/nombre_EditarProducto"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewNombreProductoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/textviewNombreProductoEditar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewDescripProdCarroComprasEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/descripcion_EditarProducto"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewDescripcionProductoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/textviewDescripcionProductoEditar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewCantProdCarroComprasModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/cantidad_EditarProducto"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewCantidadProductoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/textviewCantidadProductoEditar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewPrecioProdCarroComprasModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/precio_EditarProducto"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewPrecioProductoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/textviewPrecioProductoEditar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewTotalProdCarroComprasModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/subtotal_EditarProducto"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textViewSubtotalProductoEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/textviewSubtotalProductoEditar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/textViewNuevaCantidadProdCarroComprasModificar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="@string/nueva_cantidad_EditarProducto"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/editTextNuevaCantidadProdCarroCompras"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:inputType="number" />
+
+                <requestFocus />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewDatosProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:text="@string/detalle_del_productoDatosProducto"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonAceptarCambio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewDatosProducto"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="48dp"
+        android:gravity="start"
+        android:onClick="onGuardar"
+        android:text="@string/aceptarEditarProducto" />
+
+    <Button
+        android:id="@+id/buttonCancelarCambio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonAceptarCambio"
+        android:layout_alignBottom="@+id/buttonAceptarCambio"
+        android:layout_toRightOf="@+id/buttonAceptarCambio"
+        android:gravity="start"
+        android:onClick="onCancelar"
+        android:text="@string/cancelarCambios"
+        android:textAlignment="center" />
+
+</RelativeLayout>

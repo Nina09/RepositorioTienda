@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ec.example.tiendaonline"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ec.example.tiendaonline.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.RegistrarClienteActivity"
+            android:label="@string/title_activity_registrar_cliente" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.MenuPrincipalActivity"
+            android:label="@string/title_activity_menu_principal" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.CatalogoActivity"
+            android:label="@string/title_activity_catalogo" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ItemCatalogoActivity"
+            android:label="@string/title_activity_item_catalogo" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ProductosActivity"
+            android:label="@string/title_activity_productos" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ItemProductosActivity"
+            android:label="@string/title_activity_item_productos" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.DetalleProductoActivity"
+            android:label="@string/title_activity_detalle_producto" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.PerfilActivity"
+            android:label="@string/title_activity_perfil" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.CarritoActivity"
+            android:label="@string/title_activity_carrito" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.DetallePedidoActivity"
+            android:label="@string/title_activity_detalle_pedido" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ListarPedidosActivity"
+            android:label="@string/title_activity_pedidos" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ItemPedidosActivity"
+            android:label="@string/title_activity_item_pedidos" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.AccesandoActivity"
+            android:label="@string/title_activity_accesando" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ItemProductosDetallePedidoActivity"
+            android:label="@string/title_activity_item_productos_detalle_pedido" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.MenuPedidosActivity"
+            android:label="@string/title_activity_menu_pedidos" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.ItemCarritoActivity"
+            android:label="@string/title_activity_item_carrito" >
+        </activity>
+        <activity
+            android:name="com.ec.example.tiendaonline.PorductoSeleccionadoModificarActivity"
+            android:label="@string/title_activity_porducto_seleccionado_modificar" >
+        </activity>
+    </application>
+
+</manifest>
