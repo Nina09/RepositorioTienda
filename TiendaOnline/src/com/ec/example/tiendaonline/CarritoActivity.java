@@ -27,7 +27,7 @@ import android.widget.Toast;
 
 public class CarritoActivity extends Activity {
 	MenuPrincipalActivity mp;
-	String ip = mp.IP.toString();
+	String ip  = mp.IP.toString();
 	final String NAMESPACE = "http://servicio.upse.com";
 	final String URL ="http://"+ ip +":8080/ServicioWebPrueba/services/ServicioWeb?wsdl";
 	final String METHOD_NAME = "guardarpedido";

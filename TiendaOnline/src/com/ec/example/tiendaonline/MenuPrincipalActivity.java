@@ -30,6 +30,7 @@ public class MenuPrincipalActivity extends Activity {
 		nombre= intent.getStringExtra("nombre");
 		apellidos= intent.getStringExtra("apellidos");
 		cedula= intent.getStringExtra("cedula");
+		
 		idUsu= Integer.parseInt(intent.getStringExtra("idusuario"));
 	}
 
