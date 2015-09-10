@@ -1,5 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
@@ -9,158 +10,161 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".PerfilActivity" >
 
-    <ImageView
-        android:id="@+id/imageViewPerfil"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/logoPerfil"
-        android:src="@drawable/ic_perfil" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="429dp" >
 
-    <TextView
-        android:id="@+id/textViewPerfil"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewUsuarioPerfil"
-        android:layout_marginTop="14dp"
-        android:background="@android:color/white"
-        android:text="@string/perfilPerfil" />
+        <ImageView
+            android:id="@+id/imageViewPerfil"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/logoPerfil"
+            android:src="@drawable/ic_perfil" />
 
-    <TextView
-        android:id="@+id/textViewUsuarioPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="italic"
-        android:text="@string/usuarioPerfil" />
+        <TextView
+            android:id="@+id/textViewPerfil"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/white"
+            android:text="@string/perfilPerfil" />
 
-    <TextView
-        android:id="@+id/textViewTotalCarritoDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewApellidosPerfil"
-        android:layout_alignBottom="@+id/textViewApellidosPerfil"
-        android:layout_alignLeft="@+id/textViewTotalCarrito"
-        android:text="@string/textviewApellidoPerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewCedulaPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewNombrePerfil"
+            android:layout_below="@+id/textViewApellidosPerfil"
+            android:text="@string/cedula_Perfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewCedulaPerfilCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewCedulaPerfil"
-        android:layout_alignBottom="@+id/textViewCedulaPerfil"
-        android:layout_alignLeft="@+id/textViewTotalCarritoDetalle"
-        android:text="@string/textviewCedulaPerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewEmailPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewCedulaPerfil"
+            android:layout_below="@+id/textViewCedulaPerfil"
+            android:text="@string/email_Perfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewEmailPerfilCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewCedulaPerfilCliente"
-        android:layout_below="@+id/textViewCedulaPerfilCliente"
-        android:text="@string/textviewEmailPerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewDireccionPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewEmailPerfil"
+            android:layout_below="@+id/textViewEmailPerfil"
+            android:text="@string/direccion_Perfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewDireccionPerfilCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewEmailPerfilCliente"
-        android:layout_below="@+id/textViewEmailPerfilCliente"
-        android:text="@string/textviewDireccionPerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewUsuarioPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewPerfil"
+            android:layout_centerHorizontal="true"
+            android:text="@string/usuarioPerfil"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/textViewTelefonoPerfilCliente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textViewTelefonoPerfil"
-        android:layout_alignBottom="@+id/textViewTelefonoPerfil"
-        android:layout_alignLeft="@+id/textViewDireccionPerfilCliente"
-        android:text="@string/textviewTelefonoPerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewApellidosPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/textViewDireccionPerfil"
+            android:layout_below="@+id/textViewNombrePerfil"
+            android:text="@string/apellidos_Perfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewTotalCarrito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewTotalCarritoDetalle"
-        android:layout_alignRight="@+id/imageViewPerfil"
-        android:layout_marginRight="15dp"
-        android:text="@string/textviewNombrePerfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewEmailPerfilCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewDireccionPerfil"
+            android:layout_alignLeft="@+id/textViewTelefonoPerfilCliente"
+            android:text="@string/textviewEmailPerfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewNombrePerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewPerfil"
-        android:layout_marginTop="21dp"
-        android:layout_toLeftOf="@+id/textViewUsuarioPerfil"
-        android:text="@string/nombre_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewDireccionPerfilCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewEmailPerfilCliente"
+            android:layout_below="@+id/textViewEmailPerfilCliente"
+            android:text="@string/textviewDireccionPerfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewApellidosPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewNombrePerfil"
-        android:layout_below="@+id/textViewNombrePerfil"
-        android:text="@string/apellidos_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewTelefonoPerfilCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/imageViewPerfil"
+            android:layout_below="@+id/textViewDireccionPerfilCliente"
+            android:layout_marginRight="21dp"
+            android:text="@string/textviewTelefonoPerfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewCedulaPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewApellidosPerfil"
-        android:layout_below="@+id/textViewApellidosPerfil"
-        android:text="@string/cedula_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewNombrePerfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_above="@+id/textViewApellidosPerfil"
+            android:layout_alignLeft="@+id/textViewEmailPerfilCliente"
+            android:text="@string/textviewPerfilUsuario" />
+        <TextView
+            android:id="@+id/textViewApellidosPerfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewApellidosPerfil"
+            android:layout_alignBottom="@+id/textViewApellidosPerfil"
+            android:layout_alignLeft="@+id/textViewNombrePerfilUsuario"
+            android:text="@string/textviewApellidosPerfilUsuario"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewEmailPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textViewDireccionPerfilCliente"
-        android:layout_alignLeft="@+id/textViewCedulaPerfil"
-        android:text="@string/email_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewCedulaPerfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textViewEmailPerfilCliente"
+            android:layout_alignLeft="@+id/textViewEmailPerfilCliente"
+            android:text="@string/textviewCedulaPerfilUsuario"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewDireccionPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewEmailPerfil"
-        android:layout_below="@+id/textViewEmailPerfil"
-        android:text="@string/direccion_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textviewTelefonoPerfilUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/textViewTelefonoPerfilCliente"
+            android:layout_alignBottom="@+id/textViewTelefonoPerfilCliente"
+            android:layout_alignLeft="@+id/textViewApellidosPerfil"
+            android:text="@string/tel_fono_PerfilUsuario"
+            android:textColor="@android:color/white" />
 
-    <TextView
-        android:id="@+id/textViewTelefonoPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewDireccionPerfil"
-        android:layout_below="@+id/textViewDireccionPerfil"
-        android:text="@string/telefono_Perfil"
-        android:textColor="@android:color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewNombrePerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageViewPerfil"
+            android:layout_below="@+id/textViewUsuarioPerfil"
+            android:text="@string/nombre_Perfil"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

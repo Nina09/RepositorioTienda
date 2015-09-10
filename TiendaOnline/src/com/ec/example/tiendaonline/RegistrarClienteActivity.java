@@ -4,6 +4,9 @@ import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
+
+import com.ec.example.tiendaonline.internet.AccesoInternet;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,8 +19,8 @@ import android.widget.Toast;
 
 
 public class RegistrarClienteActivity extends Activity {
-	MenuPrincipalActivity mp;
-	String ip = mp.IP.toString();
+final String ip = "172.18.12.147";
+	
 	private final String NAMESPACE = "http://servicio.upse.com";
 	private final String URL="http://"+ip+":8080/ServicioWebPrueba/services/ServicioWeb?wsdl";
 	private final String METHOD_NAME = "registrousuario";
@@ -62,7 +65,6 @@ public class RegistrarClienteActivity extends Activity {
 	}
 
 	public void onAceptar(View v){
-		
 		String nombres = editTextNombre.getText().toString();
 		String apellidos = editTextApellidos.getText().toString();
 		String cedula = editTextCedula.getText().toString();
@@ -71,58 +73,68 @@ public class RegistrarClienteActivity extends Activity {
 		String telefono = editTextTelefono.getText().toString();
 		String alias = editTextAlias.getText().toString();
 		String dpassword = editTextContrasena.getText().toString();
-				
-		request = new SoapObject(NAMESPACE, METHOD_NAME);
-		request.addProperty("request1",nombres);
-		request.addProperty("request2",apellidos);
-		request.addProperty("request3",cedula);
-		request.addProperty("request4",email);
-		request.addProperty("request5",direccion);
-		request.addProperty("request6",telefono);
-		request.addProperty("request7",2);
-		request.addProperty("request8",alias);
-		request.addProperty("request9",dpassword);
 		
-		envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
-	    envelope.dotNet = true;
-	    envelope.setOutputSoapObject(request);
-	    
-	    HttpTransportSE transporte = new HttpTransportSE(URL);
-		
-		try {
+		AccesoInternet acci = new AccesoInternet();
+     	String internet = acci.checkConnectivity(this);
+     	
+		if(internet.equals("1")){
+			request = new SoapObject(NAMESPACE, METHOD_NAME);
+			request.addProperty("request1",nombres);
+			request.addProperty("request2",apellidos);
+			request.addProperty("request3",cedula);
+			request.addProperty("request4",email);
+			request.addProperty("request5",direccion);
+			request.addProperty("request6",telefono);
+			request.addProperty("request7",2);
+			request.addProperty("request8",alias);
+			request.addProperty("request9",dpassword);
 			
-	    	transporte.call(SOAP_ACTION, envelope);
-	    	SoapObject result = (SoapObject) envelope.bodyIn;
-	    		
-	    	
-	    	if(isEmpty()){
-				Toast.makeText(this,"Falta(n)de ingresar algun(os) Campo(s)!!", Toast.LENGTH_LONG).show();
-	    	
-	    	}else if(result != null){
+			envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+		    envelope.dotNet = true;
+		    envelope.setOutputSoapObject(request);
+		    
+		    HttpTransportSE transporte = new HttpTransportSE(URL);
+			
+			try {
 				
-	  			//Toast.makeText(getApplicationContext(), result.getProperty(0).toString(), Toast.LENGTH_SHORT).show();
-	  			if( result.getProperty(0).toString().equals("1")){
-	  				Toast.makeText(getApplicationContext(), "Agregado Exitoso", Toast.LENGTH_SHORT).show();	  				
-	  			}
-	  			if( result.getProperty(0).toString().equals("2")){
-	  				Toast.makeText(getApplicationContext(), "Usuario ya registrado", Toast.LENGTH_SHORT).show();	  				
-	  			}
-	  			if( result.getProperty(0).toString().equals("0")){
-	  				Toast.makeText(getApplicationContext(), "No se pudo ingresar", Toast.LENGTH_SHORT).show();	  				
-	  			}
-	  			}else{
-	  			Toast.makeText(getApplicationContext(), "No Response!", Toast.LENGTH_SHORT).show();
-	  		}
-	  		
-	  		
-	  		}catch (Exception e) {
-	  			e.printStackTrace();
-	  			Toast.makeText(getApplicationContext(),e.toString(), Toast.LENGTH_SHORT).show();
-	  	  		
-	  		}
-		
-		Limpiar();
-    	}
+		    	transporte.call(SOAP_ACTION, envelope);
+		    	SoapObject result = (SoapObject) envelope.bodyIn;
+		    		
+		    	
+		    	if(isEmpty()){
+					Toast.makeText(this,"Falta(n)de ingresar algun(os) Campo(s)!!", Toast.LENGTH_LONG).show();
+		    	
+		    	}else if(result != null){
+					
+		  			//Toast.makeText(getApplicationContext(), result.getProperty(0).toString(), Toast.LENGTH_SHORT).show();
+		  			if( result.getProperty(0).toString().equals("1")){
+		  				Toast.makeText(getApplicationContext(), "Agregado Exitoso", Toast.LENGTH_SHORT).show();	  				
+		  			}
+		  			if( result.getProperty(0).toString().equals("2")){
+		  				Toast.makeText(getApplicationContext(), "Usuario ya registrado", Toast.LENGTH_SHORT).show();	  				
+		  			}
+		  			if( result.getProperty(0).toString().equals("0")){
+		  				Toast.makeText(getApplicationContext(), "No se pudo ingresar", Toast.LENGTH_SHORT).show();	  				
+		  			}
+		  			}else{
+		  			Toast.makeText(getApplicationContext(), "No Response!", Toast.LENGTH_SHORT).show();
+		  		}
+		  		
+		  		
+		  		}catch (Exception e) {
+		  			e.printStackTrace();
+		  			Toast.makeText(getApplicationContext(),e.toString(), Toast.LENGTH_SHORT).show();
+		  	  		
+		  		}
+			
+			Limpiar();
+
+		}
+		else
+		{
+			Toast.makeText(getApplicationContext(),"Verifique su conexión a internet", Toast.LENGTH_SHORT).show();
+		}		
+}
 		
 	
 
@@ -146,12 +158,6 @@ public void Limpiar(){
 			return false;
 		}
 	}
-	
-    public void aceptar() {
-    	this.finish();
-		Intent intent= new Intent(this,LoginActivity.class);
-		startActivity(intent);
-    }
 
 	public void onCancelar(View v){
 		Intent intent= new Intent(this,LoginActivity.class);
@@ -166,6 +172,7 @@ public void Limpiar(){
 		return true;
 	}
 
+	
 }
 
 

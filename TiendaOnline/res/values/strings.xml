@@ -181,5 +181,9 @@
     <string name="textviewIvaPedidoCarrito">Textview</string>
     <string name="subtotal_PedidoCarrito">Subtotal:</string>
     <string name="iva_12_PedidoCarrito">Iva (12%):</string>
+    <string name="textviewCedulaPerfilUsuario">Textview</string>
+    <string name="tel_fono_PerfilUsuario">Teléfono:</string>
+    <string name="textviewApellidosPerfilUsuario">Textview</string>
+    <string name="textviewPerfilUsuario">Textview</string>
 
 </resources>
